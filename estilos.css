@@ -1,0 +1,374 @@
+/* -------------------- */
+/* Fuente personalizada */
+@font-face {
+  font-family: 'ManuskriptGotisch';
+  src: url('fuentes/ManuskriptGotisch.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* -------------------- */
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* -------------------- */
+/* Header */
+header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo {
+  font-family: 'ManuskriptGotisch', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7), 0 0 10px rgba(255,255,255,0.4);
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+header .logo:hover {
+  transform: scale(1.05);
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 0 0 15px rgba(255,255,255,0.6);
+}
+
+header .logo .alas {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s, filter 0.3s;
+  animation: aleteo 2s infinite ease-in-out alternate;
+}
+
+@keyframes aleteo {
+  0% { transform: rotate(-5deg) translateY(0); }
+  25% { transform: rotate(5deg) translateY(-2px); }
+  50% { transform: rotate(-5deg) translateY(0); }
+  75% { transform: rotate(5deg) translateY(-2px); }
+  100% { transform: rotate(-5deg) translateY(0); }
+}
+
+header .logo:hover .alas {
+  transform: scale(1.1);
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7));
+  animation-play-state: paused;
+}
+
+/* -------------------- */
+/* Nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.activa {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #ff4081;
+}
+
+/* -------------------- */
+/* Header acciones */
+.acciones-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.acciones-header input {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: none;
+  width: 120px;
+}
+
+/* -------------------- */
+/* Banner */
+.banner {
+  background-image: url(imagenes/sera.jpeg);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.banner p {
+  margin: 0.5rem 0 0 0;
+}
+
+/* -------------------- */
+/* Banner categoría */
+.categoria-banner {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  color: #ff4081;
+}
+
+/* -------------------- */
+/* Productos modernos */
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.producto {
+  position: relative;
+  background: white;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.producto img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.producto h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.producto p {
+  margin: 0.3rem 0 0.8rem 0;
+  font-weight: bold;
+  color: #ff4081;
+  font-size: 1.1rem;
+}
+
+.producto button {
+  background: linear-gradient(135deg, #ff4081, #ff6fa8);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: bold;
+}
+
+.producto button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #e73370, #ff4081);
+}
+
+/* Etiqueta destacada */
+.etiqueta {
+  position: absolute;
+  background: #ff4081;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 8px;
+  top: 12px;
+  left: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* -------------------- */
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 1rem 1rem 1rem;
+  align-items: center;
+}
+
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.filtros input, .filtros select, .filtros button {
+  margin-top: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filtros button {
+  background: #ff4081;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filtros button:hover {
+  background: #e73370;
+}
+
+/* -------------------- */
+/* Carrito moderno */
+#carrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  width: 350px;
+  height: 100%;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.3);
+  padding: 1.5rem;
+  overflow-y: auto;
+  z-index: 1000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+
+#carrito.mostrar {
+  transform: translateX(0);
+}
+
+#carrito h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ff4081;
+  padding-bottom: 0.5rem;
+}
+
+#lista-carrito li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lista-carrito input {
+  width: 50px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#lista-carrito button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #ff4081;
+  transition: transform 0.2s ease;
+}
+
+#lista-carrito button:hover {
+  transform: scale(1.2);
+}
+
+#checkout-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #ff4081, #ff6fa8);
+  color: white;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#checkout-btn:hover {
+  background: linear-gradient(135deg, #e73370, #ff4081);
+  transform: scale(1.05);
+}
+
+/* -------------------- */
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- */
+/* Responsive */
+@media (max-width: 768px) {
+  .banner h2 { font-size: 1.5rem; }
+  .banner p { font-size: 1rem; }
+  nav ul { gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .banner h2 { font-size: 1.2rem; }
+  .banner p { font-size: 0.9rem; }
+  .banner { padding: 1.5rem 0.5rem; min-height: 200px; }
+  .acciones-header { flex-direction: column; gap: 0.3rem; }
+  .acciones-header input { width: 80px; }
+  nav ul { flex-direction: column; gap: 0.5rem; margin-bottom: 0.5rem; }
+  header .logo { font-size: 1.5rem; gap: 0.3rem; }
+  header .logo .alas { width: 30px; }
+}

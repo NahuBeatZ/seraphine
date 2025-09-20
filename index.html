@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seraphine Store</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagenes/alai.png" alt="Alas izquierda" class="alas">
+      Seraphine
+      <img src="imagenes/alad.png" alt="Alas derecha" class="alas">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#" data-category="belleza">Belleza</a></li>
+        <li><a href="#" data-category="accesorios">Accesorios</a></li>
+        <li><a href="#" data-category="ropa">Ropa</a></li>
+        <li><a href="#" data-category="electrodomesticos">Electrodomésticos</a></li>
+      </ul>
+    </nav>
+
+    <div class="acciones-header">
+      <input type="text" id="buscador" placeholder="Buscar...">
+      <div id="cart-btn">🛒 <span id="cart-count">0</span></div>
+    </div>
+  </header>
+
+  <!-- Banner principal -->
+  <section class="banner">
+    <div class="banner-text">
+      <h2>Bienvenido a Seraphine</h2>
+      <p>Descubrí nuestras ofertas en Belleza, Ropa, Accesorios y Electrodomésticos</p>
+    </div>
+  </section>
+
+  <main>
+    <div id="categoria-banner" class="categoria-banner">Todos los productos</div>
+
+    <div id="filtros" class="filtros">
+      <label>Etiqueta:
+        <select id="filtro-etiqueta">
+          <option value="">Todas</option>
+          <option value="Nuevo">Nuevo</option>
+          <option value="Oferta">Oferta</option>
+        </select>
+      </label>
+
+      <label>Precio máximo:
+        <input type="number" id="filtro-precio" placeholder="Ej: 5000">
+      </label>
+
+      <button id="aplicar-filtros">Aplicar filtros</button>
+      <button id="limpiar-filtros">Limpiar filtros</button>
+    </div>
+
+    <!-- Productos -->
+    <section id="productos"></section>
+  </main>
+
+  <!-- Carrito -->
+  <aside id="carrito" class="oculto">
+    <h2>Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <button id="checkout-btn">Finalizar compra</button>
+  </aside>
+
+  <!-- Footer -->
+  <footer> 
+    <p>📍 Av. Siempre Viva 123 - Buenos Aires</p>
+    <p>📞 +54 341 613-3057 | ✉ contacto@mitienda.com</p>
+    <p>🌐 Síguenos: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
